@@ -9,6 +9,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initialize Inventory Repository only for one time with companion object function in InventoryRepository class
         InventoryRepository.init(this)
     }
 }
