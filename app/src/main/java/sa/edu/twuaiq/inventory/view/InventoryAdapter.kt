@@ -59,6 +59,17 @@ class InventoryAdapter
         holder.priceTextView.text = item.price.toString()
         holder.inStock.isChecked = item.inStock
 
+        holder.itemView.setOnClickListener { view ->
+
+            // post value to liveData to send data from the inventory list fragment to item details fragment
+            viewModel.selectedItemMutableLiveDate.postValue(item)
+            view.findNavController().navigate(R.id.action_inventoryListFragment_to_itemDetailsFragment)
+        }
+
+        holder.inStock.setOnClickListener {
+            item.inStock = holder.inStock.isChecked
+            viewModel.updateItem(item)
+        }
     }
 
     /**

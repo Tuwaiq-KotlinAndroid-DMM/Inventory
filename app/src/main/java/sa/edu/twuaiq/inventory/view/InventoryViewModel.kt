@@ -26,6 +26,8 @@ class InventoryViewModel: ViewModel() {
 
     var inventoryItems = inventoryRepository.getItems()
 
+
+    var item: ItemModel? = null
     var selectedItemMutableLiveDate = MutableLiveData<ItemModel>()
 
 

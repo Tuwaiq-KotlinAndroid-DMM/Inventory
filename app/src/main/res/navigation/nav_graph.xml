@@ -8,23 +8,27 @@
     <fragment
         android:id="@+id/inventoryListFragment"
         android:name="sa.edu.twuaiq.inventory.view.InventoryListFragment"
-        android:label="fragment_inventory_list"
-        tools:layout="@layout/fragment_inventory_list" >
+        android:label="Inventory"
+        tools:layout="@layout/fragment_inventory_list">
         <action
             android:id="@+id/action_inventoryListFragment_to_addItemFragment"
-            app:destination="@id/addItemFragment" />
+            app:destination="@id/addItemFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_inventoryListFragment_to_itemDetailsFragment"
-            app:destination="@id/itemDetailsFragment" />
+            app:destination="@id/itemDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
         android:name="sa.edu.twuaiq.inventory.view.AddItemFragment"
-        android:label="fragment_add_item"
+        android:label="Add Item"
         tools:layout="@layout/fragment_add_item" />
     <fragment
         android:id="@+id/itemDetailsFragment"
         android:name="sa.edu.twuaiq.inventory.view.ItemDetailsFragment"
-        android:label="fragment_item_details"
+        android:label="Item Details"
         tools:layout="@layout/fragment_item_details" />
 </navigation>

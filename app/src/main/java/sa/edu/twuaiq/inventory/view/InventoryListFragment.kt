@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import sa.edu.twuaiq.inventory.R
@@ -78,7 +79,11 @@ class InventoryListFragment : Fragment() {
             }
         })
 
+        addFloatingActionButton.setOnClickListener {
 
+            // Use the navigate method of NavController class with a destination id given in the navigation graph.
+            findNavController().navigate(R.id.action_inventoryListFragment_to_addItemFragment)
+        }
     }
 
 }
